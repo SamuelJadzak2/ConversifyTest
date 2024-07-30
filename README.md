@@ -10,7 +10,7 @@
 
 # Design
 
-I tried to split up the call components for readability. I also wanted to split up the components that handle the UI from the ones that handle the API functionality to more closely follow React development practices. I put most of the API functionality inside of a context because I imagined that the functions might be used across multiple components, making it easier to manage and maintain the code.
+I tried to split up the call components for readability. I also wanted to split up the components that handle the UI from the ones that handle the API functionality to more closely follow React development practices. I put the API functionality inside of a context because I imagined that the functions might be used across multiple components and I wanted to make it easier to manage and maintain the code.
 
 # If I had more time...
 
