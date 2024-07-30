@@ -36,7 +36,13 @@
     "ios": {
       "icon": "./assets/images/app-icon-ios.png",
       "supportsTablet": true,
-      "bundleIdentifier": "com.conversifytest",
+      "bundleIdentifier": "co.vapi.DailyPlayground",
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "voip"
+        ]
+      },
+      "bitcode": false,
       "splash": {
         "image": "./assets/images/splash-logo-ios-mobile.png",
         "tabletImage": "./assets/images/splash-logo-ios-tablet.png",
@@ -54,16 +60,20 @@
       "bundler": "metro"
     },
     "plugins": [
+      "@config-plugins/react-native-webrtc",
+      "@daily-co/config-plugin-rn-daily-js",
       "expo-localization",
       [
         "expo-build-properties",
         {
           "ios": {
             "newArchEnabled": false,
-            "flipper": false
+            "flipper": false,
+            "deploymentTarget": "13.4"
           },
           "android": {
-            "newArchEnabled": false
+            "newArchEnabled": false,
+            "minSdkVersion": 24
           }
         }
       ],
